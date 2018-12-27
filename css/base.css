@@ -20,6 +20,11 @@ ul {
     margin: 0; /* 橘黄色 */
     padding: 0 /* 绿色 */
 }
+h1,h5,p{
+    margin: 0;
+    padding: 0px;
+}
+
 
 input, button {
     margin: 0;
@@ -184,7 +189,7 @@ a {
 .header .inner {
     height: 140px;
     position: relative;
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
 }
 
 .header .logo {
@@ -367,7 +372,7 @@ a {
     left: 210px;
     bottom: 0;
 }
-
+/* ul */
 .navitem ul {
     float: left;
 }
@@ -375,13 +380,14 @@ a {
 .navitem li {
     float: left;
     margin-left: 30px;
+    /* 另一种是给左右margin 有bug */
 
 }
 
 .navitem li a {
     line-height: 40px;
     font-size: 14px;
-    font-weight: bolder;
+    font-weight: 700;
     color: #555555;
     display: block;
     /* 块级元素可以给宽高!!!! */
@@ -393,9 +399,115 @@ a {
 
 .navitem .spacer {
     float: left;
-    margin-left: 30px;
-    /*margin-right: 30px;*/
+    margin-left: 20px;
+    margin-right: -10px;
     margin-top: 15px;
 }
 
 /* navitem end */
+
+
+
+/* footer begin */
+.footer{
+    height: 570px;
+    background-color: #eaeaea;
+}
+.top{
+    height: 100px;
+    border-bottom: 1px solid #999999;
+}
+.f-t-w{
+    height: 100px;
+    /*background-color: pink;*/
+    overflow: hidden;
+}
+
+.bg{
+    width: 40px;
+    height: 40px;
+    margin-top: 30px;
+    background: url(../images/ico_service.png) no-repeat 0 0;
+    float: left;
+
+}
+.footer .text{
+    float: left;
+    margin-top: 43px;
+    font-size: 18px;
+    line-height: 18px;
+
+}
+.item{
+    /*height: 100px;*/
+    /*padding-left: 50px ;*/
+    /*padding-right: 50px;*/
+    padding: 0px 50px;
+    float: left;
+}
+.footer2{
+    height: 200px;
+    border: 1px solid black;
+}
+
+
+/* footer end */
+
+/* footer2 start*/
+.footer2{
+    height: 560px;
+    background: #EAEAEA;
+    /*border-bottom: 1px solid #999999;*/
+
+}
+.footer-service{
+    border-bottom: 1px solid #999999;
+
+}
+
+.footer-service-inner{
+    /* 上下30px 左右0px 由于没给高 however */
+    padding: 30px 0;
+
+}
+.footer-service-inner li{
+    float: left;
+    width: 297px;
+    height: 42px;
+    /*background-color: purple;*/
+}
+
+
+
+.footer2 .service_unit{
+    width: 222px;
+    height: 42px;
+    /* 嵌套一个小盒子 居中 */
+    margin: 0 auto;
+    line-height: 42px;
+}
+.footer2 h5{
+    /* 刚好正中不用调位置!!!!!! 否则需要left top */
+    position: absolute;
+    background: url(../images/ico_service.png) no-repeat;
+    width: 45px;
+    height: 43px;
+    text-indent: -999em;
+    overflow: hidden;
+}
+.footer2 p{
+    /* 用padding-left需要减去宽度!!!! */
+    margin-left: 45px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.footer2 .kuai{
+    background-position: 0 -43px;
+}
+.footer2 .hao{
+    background-position: 0 -86px;
+}
+.footer2 .sheng{
+    background-position: 0 -128px;
+}
+/* footer2 end*/
