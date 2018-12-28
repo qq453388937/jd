@@ -1,0 +1,57 @@
+.jd{
+    height: 960px;
+    background-color: #f6f6f6;
+    position: relative;
+}
+.jd .inner{
+    height: 480px;
+    background-color: #eeeeee;
+     /* poa 会转换为行内块 */
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*margin-left: -595px;*/
+    /*z-index: 10;*/
+    position: relative;
+    z-index: 1;
+    /* z-index级别相同后来者居上 */
+
+}
+.jd .ad{
+    /* poa 会转换为行内块 */
+    position: absolute;
+    height: 480px;
+    /* 宽度100% 铺满屏幕自适应 */
+    width: 100%;
+    background: url(../images/bg.png) no-repeat top center;
+    top: 0;
+    left: 0;
+
+}
+.jd .ad a{
+    /* a也要铺满! */
+    width: 100%;
+    height: 480px;
+    display: block;
+}
+
+.jd .inner .left{
+    float: left;
+    width: 180px;
+    height: 100%;
+    background-color: #F10215;
+}
+.jd .inner .center{
+    float: left;
+    width: 830px;
+    height: 100%;
+    background-color: green;
+}
+.jd .inner .right{
+    float: right;
+    width: 180px;
+    height: 100%;
+    background-color: yellow;
+}
+
+
+

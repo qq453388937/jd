@@ -20,7 +20,8 @@ ul {
     margin: 0; /* 橘黄色 */
     padding: 0 /* 绿色 */
 }
-h1,h5,p{
+
+h1, h5, p {
     margin: 0;
     padding: 0px;
 }
@@ -36,10 +37,14 @@ a {
     text-decoration: none;
 }
 
-.a_hover {
+.a_hover:hover {
     color: #f10215 !important;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
 
 /* css font reset */
 @font-face {
@@ -372,6 +377,7 @@ a {
     left: 210px;
     bottom: 0;
 }
+
 /* ul */
 .navitem ul {
     float: left;
@@ -407,23 +413,24 @@ a {
 /* navitem end */
 
 
-
 /* footer begin */
-.footer{
+.footer {
     height: 570px;
     background-color: #eaeaea;
 }
-.top{
+
+.top {
     height: 100px;
     border-bottom: 1px solid #999999;
 }
-.f-t-w{
+
+.f-t-w {
     height: 100px;
     /*background-color: pink;*/
     overflow: hidden;
 }
 
-.bg{
+.bg {
     width: 40px;
     height: 40px;
     margin-top: 30px;
@@ -431,21 +438,24 @@ a {
     float: left;
 
 }
-.footer .text{
+
+.footer .text {
     float: left;
     margin-top: 43px;
     font-size: 18px;
     line-height: 18px;
 
 }
-.item{
+
+.item {
     /*height: 100px;*/
     /*padding-left: 50px ;*/
     /*padding-right: 50px;*/
     padding: 0px 50px;
     float: left;
 }
-.footer2{
+
+.footer2 {
     height: 200px;
     border: 1px solid black;
 }
@@ -454,23 +464,25 @@ a {
 /* footer end */
 
 /* footer2 start*/
-.footer2{
+.footer2 {
     height: 560px;
     background: #EAEAEA;
     /*border-bottom: 1px solid #999999;*/
 
 }
-.footer-service{
+
+.footer-service {
     border-bottom: 1px solid #999999;
 
 }
 
-.footer-service-inner{
+.footer-service-inner {
     /* 上下30px 左右0px 由于没给高 however */
     padding: 30px 0;
 
 }
-.footer-service-inner li{
+
+.footer-service-inner li {
     float: left;
     width: 297px;
     height: 42px;
@@ -478,15 +490,15 @@ a {
 }
 
 
-
-.footer2 .service_unit{
+.footer2 .service_unit {
     width: 222px;
     height: 42px;
     /* 嵌套一个小盒子 居中 */
     margin: 0 auto;
     line-height: 42px;
 }
-.footer2 h5{
+
+.footer2 .footer-service h5 {
     /* 刚好正中不用调位置!!!!!! 否则需要left top */
     position: absolute;
     background: url(../images/ico_service.png) no-repeat;
@@ -495,19 +507,185 @@ a {
     text-indent: -999em;
     overflow: hidden;
 }
-.footer2 p{
+
+.footer2 p {
     /* 用padding-left需要减去宽度!!!! */
     margin-left: 45px;
     font-size: 18px;
     font-weight: 700;
 }
-.footer2 .kuai{
+
+.footer2 .kuai {
     background-position: 0 -43px;
 }
-.footer2 .hao{
+
+.footer2 .hao {
     background-position: 0 -86px;
 }
-.footer2 .sheng{
+
+.footer2 .sheng {
     background-position: 0 -128px;
 }
+
+/* help */
+.helper {
+    height: 180px;
+    border: 1px solid #000;
+    /*background-color: pink;*/
+    padding-top: 20px;
+}
+
+/*help end*/
+.helper dl {
+    float: left;
+    /* 宽度剩余法 */
+    width: 190px;
+}
+
+.helper dt {
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+    /*height: 33px;*/
+    /* 高度剩余法 or margin-bottom */
+    margin-bottom: 20px;
+}
+
+.helper dd {
+    /* 行内元素a给宽高无效 */
+    height: 22px;
+    text-align: center;
+}
+
+.helper dd a {
+    color: #727272;
+    font-size: 12px;
+    height: 22px;
+}
+
+.helper dd a:hover {
+    color: #F10215;
+}
+
+.helper .china {
+    width: 207px;
+    height: 150px;
+    /*background-color: blue;*/
+    float: right;
+    background: url(../images/ico_footer.png) no-repeat 0 0;
+}
+
+.helper dl dt {
+    text-align: center;
+}
+
+.helper .china p {
+    text-align: center;
+    height: 80px;
+    font: 12px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+    color: #666;
+    width: 130px;
+
+}
+
+.footer2 .china h5 {
+    font: 14px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+    color: #666;
+    width: 112px;
+    margin: 0 auto;
+    font-weight: 800;
+}
+
+.footer .china a {
+    line-height: 100px;
+    background-color: #fff;
+}
+
+/* 版权模块 */
+.copyright {
+    padding-top: 30px;
+    text-align: center;
+
+}
+
+.links {
+    color: #727272;
+    font-size: 14px;
+}
+
+/* 行内块元素span默认就有缝隙!! */
+.copyright span {
+    color: #dfd4cd;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+.info {
+    overflow: hidden;
+    margin-left: 200px;
+}
+
+
+.info p {
+    margin: 0 0 0 20px;
+    float: left;
+    font-size: 13px;
+    color: #999;
+    line-height: 20px;
+
+
+}
+
+.info span {
+    color: #999;
+    float: left;
+    margin-left: 20px;
+}
+
+.tupian {
+    border: 1px solid #eee;
+
+}
+
+.tupian a {
+    height: 34px;
+    width: 103px;
+    float: left;
+}
+
+.tupian .docker {
+    height: 34px;
+    width: 620px;
+    margin: 0 auto;
+}
+
+.docker .a1 {
+    background: url(../images/ico_footer.png) no-repeat 0 -150px;
+}
+
+.docker .a2 {
+    background: url(../images/ico_footer.png) no-repeat -102px -150px;
+}
+
+.docker .a3 {
+    background: url(../images/ico_footer.png) no-repeat  0 -183px;
+}
+
+.docker .a4 {
+    background: url(../images/ico_footer.png) no-repeat -104px -183px;
+}
+
+.docker .a5 {
+    background: url(../images/ico_footer.png) no-repeat  0 -216px;
+}
+
+.docker .a6 {
+    background: url(../images/ico_footer.png) no-repeat -104px -216px;
+}
+
+
+/* 版权模块 end */
+
 /* footer2 end*/
