@@ -1,22 +1,29 @@
-.jd{
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.jd {
     height: 960px;
     background-color: #f6f6f6;
     position: relative;
 }
-.jd .inner{
+
+.jd .inner {
     height: 480px;
     background-color: #eeeeee;
-     /* poa 会转换为行内块 */
+    /* poa 会转换为行内块 */
     /*position: absolute;*/
     /*left: 50%;*/
     /*margin-left: -595px;*/
     /*z-index: 10;*/
     position: relative;
-    z-index: 1;
+    z-index: 2;
     /* z-index级别相同后来者居上 */
 
 }
-.jd .ad{
+
+.jd .ad {
     /* poa 会转换为行内块 */
     position: absolute;
     height: 480px;
@@ -27,31 +34,171 @@
     left: 0;
 
 }
-.jd .ad a{
+
+.jd .ad a {
     /* a也要铺满! */
     width: 100%;
     height: 480px;
     display: block;
 }
 
-.jd .inner .left{
+.jd .inner .left {
     float: left;
     width: 180px;
-    height: 100%;
-    background-color: #F10215;
+    height: 460px;
 }
-.jd .inner .center{
-    float: left;
-    width: 830px;
-    height: 100%;
-    background-color: green;
-}
-.jd .inner .right{
+
+.jd .inner .right {
     float: right;
     width: 180px;
     height: 100%;
     background-color: yellow;
 }
+
+.jd .inner .left {
+    padding-top: 20px;
+    background: #6e6568;
+}
+
+.jd .left li {
+    padding-left: 15px;
+    line-height: 27px;
+    overflow: hidden;
+}
+
+.jd .inner a, .jd .inner span {
+    color: #fff;
+    float: left;
+    font-size: 14px;
+}
+
+.cate_menu_line {
+    margin-top: 4px;
+    padding: 0 2px;
+    font-size: 12px;
+}
+
+.jd .inner li:hover {
+    color: peachpuff;
+    background-color: pink;
+}
+
+.jd .inner .center {
+    float: left;
+    width: 790px;
+    height: 100%;
+    /*background-color: green;*/
+    margin: 0 10px 0 22px;
+}
+
+.jd .center .banner {
+    height: 340px;
+    background-color: #dddddd;
+}
+
+.bt-l {
+    height: 128px;
+    width: 383px;
+    background-color: lightgoldenrodyellow;
+    float: left;
+    margin-top: 12px;
+}
+
+.bt-l img {
+    width: 100%;
+}
+
+.bt-r {
+    height: 128px;
+    width: 382px;
+    float: right;
+    /*background-color: mediumvioletred;*/
+    margin-top: 12px;
+
+}
+
+.bt-r img {
+    width: 100%;
+}
+
+
+/* banner */
+.jd .inner .banner {
+    position: relative;
+}
+
+.banner .arrow a {
+    font-family: "icomoon";
+    font-style: normal;
+    height: 60px;
+    width: 30px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+}
+
+.banner .arrow a:hover {
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+.center .banner ul li {
+    width: 790px;
+    height: 340px;
+}
+
+.banner .arrow .arr-l {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -30px;
+}
+
+.banner .arrow .arr-r {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+}
+
+.jd .center .banner ol {
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -100px;
+    background-color: rgba(255,255,255,0.3);
+    padding: 0 10px;
+    border-radius: 30px;
+
+
+}
+
+.jd .center ol li {
+    float: left;
+    border-radius: 50%;
+    margin-left: 12px;
+
+}
+.banner .circle a{
+    display: block;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+
+
+}
+.banner .circle a:hover{
+    background-color: #F10215;
+}
+
+/* banner 结束 */
+
+
 
 
 
