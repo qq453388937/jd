@@ -4,14 +4,14 @@
 }
 
 .jd {
-    height: 960px;
+    height: 560px;
     background-color: #f6f6f6;
     position: relative;
 }
 
 .jd .inner {
     height: 480px;
-    background-color: #eeeeee;
+    background-color: #fff;
     /* poa 会转换为行内块 */
     /*position: absolute;*/
     /*left: 50%;*/
@@ -52,7 +52,6 @@
     float: right;
     width: 180px;
     height: 100%;
-    background-color: yellow;
 }
 
 .jd .inner .left {
@@ -66,7 +65,7 @@
     overflow: hidden;
 }
 
-.jd .inner a, .jd .inner span {
+.jd .inner .left a, .jd .inner .left span {
     color: #fff;
     float: left;
     font-size: 14px;
@@ -80,7 +79,7 @@
 
 .jd .inner li:hover {
     color: peachpuff;
-    background-color: pink;
+    /*background-color: pink;*/
 }
 
 .jd .inner .center {
@@ -91,11 +90,7 @@
     margin: 0 10px 0 22px;
 }
 
-.jd .center .banner {
-    height: 340px;
-    background-color: #dddddd;
-}
-
+/* 图片的容器要给宽高好等比缩放 */
 .bt-l {
     height: 128px;
     width: 383px;
@@ -117,12 +112,19 @@
 
 }
 
+/* 等比缩放 img不可以给高度 */
 .bt-r img {
     width: 100%;
 }
 
 
 /* banner */
+
+.jd .center .banner {
+    height: 340px;
+    background-color: #dddddd;
+}
+
 .jd .inner .banner {
     position: relative;
 }
@@ -154,6 +156,14 @@
     margin-top: -30px;
 }
 
+.arrow {
+    display: none;
+}
+
+.banner:hover .arrow {
+    display: block;
+}
+
 .banner .arrow .arr-r {
     position: absolute;
     right: 0;
@@ -168,7 +178,7 @@
     bottom: 20px;
     left: 50%;
     margin-left: -100px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     padding: 0 10px;
     border-radius: 30px;
 
@@ -181,20 +191,198 @@
     margin-left: 12px;
 
 }
-.banner .circle a{
+
+.banner .circle a {
+    /* 行内元素转换为块级元素 */
     display: block;
     text-align: center;
     width: 20px;
     height: 20px;
     background-color: #fff;
     border-radius: 50%;
-    font-size: 20px;
+}
 
+.right-top {
+    background-color: #fff;
+    height: 111px;
+    border-bottom: 3px solid #e6e6e6;
+}
+
+
+
+
+
+/*  右侧用户3大模块 */
+.right-top.user {
+    /* 上下0 左右15px  下*/
+    padding: 20px 10px 0;
 
 }
-.banner .circle a:hover{
+
+.user-info {
+    height: 50px;
+    /* 文字挤过来 头像定位过去*/
+    padding-left: 58px;
+    line-height: 25px;
+    position: relative;
+
+}
+
+.right-top .user-info a {
+    color: pink;
+    display: block;
+    padding: 0;
+    /* 给a加圆角严格的说! */
+    border-radius: 50%;
+    /* 多余的图片跟着小手切去 */
+    overflow: hidden;
+}
+
+.right-top .user-info a.a_hover {
+    color: pink;
+    display: inline-block;
+    padding: 0 0 0 3px;
+    margin-right: 0;
+}
+
+.user-info .desc {
+    font-size: 12px;
+    color: #918274;
+}
+
+.user-info .header-info {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.user-info .header-info img {
+    /*width: 50px;*/
+    width: 52px;
+    height: 52px;
+    margin-left: 1px;
+    /* 宽高一半正圆 */
+}
+
+.user-profit {
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.user-profit a {
+    color: #e01222;
+    border: 2px solid #e01222;
+    font-size: 14px;
+
+}
+
+/* news 相关 */
+.right-middle {
+    height: 147px;
+    border-bottom: 3px solid #e6e6e6;
+    padding: 5px 15px 0;
+    position: relative;
+}
+.news .tab-hd{
+    line-height: 20px;
+    /* padding: 0 0 2px 0; 下padding 2px */
+    font-size: 14px;
+    text-align: center;
+}
+.news .tab-hd .cuxiao, .news .tab-hd .gonggao{
+    border-right: 1px solid #555555;
+    float: left;
+    margin-left: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px 10px 3px 3px;
+}
+.news .tab-hd .more{
+    position: absolute;
+    right: 15px;
+    top: 19px;
+}
+/* tab 底线必须用绝对定位 */
+.news .tab-hd .line{
+    width: 32px;
+    height: 2px;
     background-color: #F10215;
+    position: absolute;
+    left: 28px;
+    top: 40px;
 }
+
+.news .tab-bd a{
+     color: green;
+     font-size: 12px;
+     background: #fff;
+     line-height: 20px;
+ }
+.news .tab-bd a:hover{
+    color: pink;
+    font-size: 12px;
+}
+
+.news .tab-bd li{
+    background: #fff !important;
+}
+.news .tab-bd ul{
+    margin-left: 1px;
+}
+
+.right-last {
+    height: 190px;
+    /*background-color: peachpuff;*/
+}
+.services{
+    width: 180px;
+}
+.services ul {
+    width: 180px;
+    overflow: hidden;
+}
+
+.services ul li{
+    width: 44px;
+    height: 62px;
+    /*background-color: pink;*/
+    float: left;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+}
+.yeye{
+    height: 188px;
+    width: 178px;
+    overflow: hidden;
+}
+
+.services ul a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* 100%根据父亲 */
+    /* auto 是根据自己 */
+}
+.services i{
+    display: block;
+    width: 25px;
+    height: 25px;
+    /*background-color: #000;*/
+    /* 块级元素 */
+    background: url(../images/sprite_fs@1x.png) no-repeat;
+    margin: 10px auto 8px;
+}
+.services p{
+    text-align: center;
+}
+
+
+
+
+
 
 /* banner 结束 */
 
