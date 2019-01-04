@@ -154,22 +154,53 @@ aside ul{
     padding: 20px 0;
 }
 aside li {
-    height: 50px;
+    /*height: 50px;*/
+    /* 行高a标签可以继承 */
     line-height: 50px;
     padding: 0 20px;
 }
 aside li a{
     color: #e0dde7;
+    display: inline-block;
 }
 aside li a:hover{
     color: #fff;
 }
-.banner aside li::after{
+.banner aside li a:hover::after{
+    color: green;
+}
+.banner aside li a::after{
     font-family: icomoon;
     content: "\ea50";
     color: red;
     float: right;
     font-size: 18px;
+}
+/*circle*/
+.banner .circle{
+    width: 176px;
+    height: 30px;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    margin-left: -88px;
+    padding: 5px 0;
+
+}
+.banner .circle a{
+    float: left;
+    /*border: 1px solid blue;*/
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 8px;
+    background-color: rgba(255,255,255,.3);
+
+}
+
+.banner .circle a:hover{
+    background-color: #F10215!important;
+
 }
 
 /******** banner 部分 ********/
