@@ -1,0 +1,176 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #f3f5f7;
+}
+header{
+    width: 1300px;
+    height: 100px;
+    /*border: 1px solid red;*/
+    margin: 0 auto;
+    /* 统一设置挤下来 */
+    padding-top: 30px;
+}
+/******** Header 部分 ********/
+/*** logo ***/
+.logo{
+    width: 195px;
+    height: 42px;
+    float: left;
+}
+
+.logo a{
+    /*float: left;*/
+    display: block;
+    width: 100%;
+    height: 42px;
+    background: url(../images/logo.png) no-repeat left top;
+    /* 尽量下放职责单一 */
+    text-indent: -999em;
+    /* 确保万无一失 */
+    overflow: hidden;
+
+}
+/*** logo end ***/
+/*** nav ***/
+nav{
+    float: left;
+}
+nav ul{
+    float: left;
+    margin-left: 65px;
+}
+nav li{
+    box-sizing: border-box;
+    float: left;
+    height: 42px;
+    line-height: 42px;
+    /* li 间隔开 */
+    padding: 0 30px;
+}
+nav li a {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    height: 42px;
+    /* a 往里挤 */
+    padding: 0 5px;
+
+
+}
+nav li a:hover{
+    border-bottom: 1px solid #00a4ff;
+
+}
+/*** nav end ***/
+
+/*** user  ***/
+.user{
+    width: 300px;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+}
+.user dt,.user dd,.user dl{
+    float: left;
+}
+.user s{
+    text-decoration: none;
+    position: relative;
+}
+.user s::before{
+    display: inline-block;
+    position: absolute;
+    content:"";
+    width: 8px;
+    height: 8px;
+    color: red;
+    background-color: red;
+    border-radius: 50%;
+    right: -5px;
+    top: -5px;
+
+}
+.user dt,.user dd{
+    margin-left: 25px;
+}
+/*** user end ***/
+/*** search   ***/
+.search{
+    height: 40px;
+    width: 300px;
+    float: left;
+    margin-left: 83px;
+    position: relative;
+}
+.search input{
+    outline: none;
+    height: 40px;
+    width: 250px;
+    border: 1px solid #00a4ff;
+    padding: 0 15px;
+    line-height: 40px;
+}
+.search button{
+    width: 50px;
+    height: 40px;
+    background: url(../images/fa-search.png) no-repeat left top;
+    border: 1px solid  #00a4ff;
+    outline: none;
+    float: right;
+}
+
+dd span img{
+    border-radius: 50%;
+    vertical-align: center;
+}
+
+/*** search end  ***/
+/******** Header 部分 ********/
+/******** banner 部分 ********/
+section.banner{
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner .main{
+    height: 420px;
+    position: relative;
+
+    /*background: url(../images/banner.jpg);*/
+    /*background-color: pink;*/
+}
+.banner aside{
+    height: 420px;
+    background-color: rgba(0,0,0,.3);
+    width: 190px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+aside ul{
+    padding: 20px 0;
+}
+aside li {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+aside li a{
+    color: #e0dde7;
+}
+aside li a:hover{
+    color: #fff;
+}
+.banner aside li::after{
+    font-family: icomoon;
+    content: "\ea50";
+    color: red;
+    float: right;
+    font-size: 18px;
+}
+
+/******** banner 部分 ********/
+
