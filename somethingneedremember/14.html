@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?hrstq9');
+            src: url('fonts/icomoon.eot?hrstq9#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?hrstq9') format('truetype'),
+            url('fonts/icomoon.woff?hrstq9') format('woff'),
+            url('fonts/icomoon.svg?hrstq9#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        div {
+            width: 100px;
+            height: 30px;
+            border: 2px solid #eee;
+            margin: 100px auto;
+            font-family: icomoon;  /* 可以给::after类也可以不给 */
+            /* 子绝父相 */
+            position: relative;
+        }
+
+        div::after {  /* 是一个能插入元素的选择器 */
+            content:"\ea51";  /*必须给content*/
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            transition: all 0.5s;
+        }
+        div:hover{
+            border: 2px solid red;
+
+        }
+        /* 只能给一个盒子加一次hover否则会被重叠 */
+        div:hover::after{
+            color: red;
+            transform: rotate(180deg);
+            top: 10px;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>
