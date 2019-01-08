@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>携程在手,说走就走</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        em, i {
+            font-style: normal
+        }
+
+        li {
+            list-style: none
+        }
+
+        img {
+            border: 0;
+            vertical-align: middle
+        }
+
+        button {
+            cursor: pointer
+        }
+
+        a {
+            color: #666;
+            text-decoration: none
+        }
+
+        a:hover {
+            color: #e33333
+        }
+
+        button, input {
+            font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, \\5B8B\4F53, sans-serif
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            background-color: #fff;
+            font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, \\5B8B\4F53, sans-serif;
+            color: #666
+        }
+
+        .hide, .none {
+            display: none
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            clear: both;
+            display: block;
+            content: ".";
+            height: 0
+        }
+
+        .clearfix {
+            *zoom: 1
+        }
+
+
+        /*     正文         */
+        html, body {
+            min-width: 320px; /*540,640,750*/
+            max-width: 540px;
+            height: 400px;
+            background-color: #f2f2f2;
+            margin: 0 auto;
+            /* 复制过来的 */
+            font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+        }
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        img {
+            width: 540px;
+        }
+
+        nav {
+            border: 1px solid #ccc;
+            padding: 0 4px;
+        }
+
+        .row {
+            /* 伸缩布局 */
+            display: flex;
+            /* 父亲高90px */
+            height: 90px;
+            line-height: 90px;
+            /*line-height: 90px;*/
+            text-align: center;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 5px 0;
+        }
+
+        .row div {
+
+            height: 100%; /* 高度和父亲一样90px 也可以写90px */
+            flex: 1;
+        }
+
+        .out {
+            /*margin-right: 1px;*/
+            border-right: 1px solid #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        /*.out:first-child{*/
+            /*flex: 2;*/
+        /*}*/
+
+        .out:nth-child(1), .in {
+            background-color: #FF697A;
+        }
+
+        .out:nth-child(3) {
+            /*margin-right: 0;*/
+            border-right: 0;
+        }
+
+        .out .in{
+            flex: 1;
+            height: 50%;
+            line-height: 45px;
+            /*margin-top: 1px;*/
+            border-top: 1px solid #fff;
+        }
+
+        .in:nth-child(1) {
+            /*margin-top: 0;*/
+            border-top: 0;
+        }
+        .row:nth-child(2)  .out:nth-child(1), .row:nth-child(2) .in {
+            background-color: deepskyblue;
+        }
+        .row:nth-child(3)  .out:nth-child(1), .row:nth-child(3) .in {
+            background-color: orange;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="images/banner.jpg" alt="">
+</header>
+<!-- 导航栏 -->
+<nav>
+    <!-- 行 -->
+    <!-- 高度是一定的宽度是伸缩的  -->
+    <div class="row">
+        <div class="out">
+            <a href="#">酒店</a>
+        </div>
+        <div class="out">
+            <!--<div class="out">132</div>-->
+
+            <div class="in"><a href="#">2</a></div>
+            <div class="in"><a href="#">3</a></div>
+        </div>
+        <div class="out">
+            <div class="in"><a href="#">4</a></div>
+            <div class="in"><a href="#">5</a></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="out">
+            <a href="#">酒店</a>
+        </div>
+        <div class="out">
+            <!--<div class="out">132</div>-->
+
+            <div class="in"><a href="#">2</a></div>
+            <div class="in"><a href="#">3</a></div>
+        </div>
+        <div class="out">
+            <div class="in"><a href="#">4</a></div>
+            <div class="in"><a href="#">5</a></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="out">
+            <a href="#">酒店</a>
+        </div>
+        <div class="out">
+            <!--<div class="out">132</div>-->
+
+            <div class="in"><a href="#">2</a></div>
+            <div class="in"><a href="#">3</a></div>
+        </div>
+        <div class="out">
+            <div class="in"><a href="#">4</a></div>
+            <div class="in"><a href="#">5</a></div>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
